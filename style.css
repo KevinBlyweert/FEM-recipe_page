@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(30, 54%, 90%);
+}
+
+main {
+    background-color: #fff;
+}
+
+#mainImg {
+    width: 100%;
+}
+
+h1,
+h2 {
+    font-family: "Young Serif", serif;
+}
+
+#recipeBody {
+    padding: 20px;
+}
+
+li {
+    padding-left: 20px;
+}
+
+.listItemTitle {
+    font-weight: bold;
+}
+
+#prepSection {
+    margin: 40px;
+
+    h3 {
+        color: hsl(332, 51%, 32%);
+    }
+
+    #prepList {
+        padding-left: 20px;
+    }
+
+    li {
+        width: 75%;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.recipeSections {
+    h2 {
+        color: hsl(14, 45%, 36%);
+    }
+
+    li {
+        width: 90%;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid hsl(30, 18%, 87%);
+    }
+
+    &#instructions li::marker {
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+    }
+
+    &#nutrition {
+
+        p {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid hsl(30, 18%, 87%);
+                }
+
+                div {
+                    text-align: left;
+                    width: 50%;
+
+                    &.listRightCol {
+                        color: hsl(14, 45%, 36%);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 10%;
+    }
+
+    main {
+        padding: 20px;
+        width: 50%;
+        border-radius: 20px;
+
+        #recipeBody {
+            padding: 0;
+        }
+
+        #mainImg {
+            border-radius: 10px;
+        }
+    }
+}
